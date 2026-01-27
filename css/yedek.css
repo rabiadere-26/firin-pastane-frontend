@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-color: antiquewhite;
+}
+h1{
+    font-size: 40px;
+    letter-spacing: 1px;
+    font-family:serif;
+}
+img, video{
+    width: 100%;
+}
+td img{
+    border-radius: 10px;
+}
+a, a:active, a:link, a::before, a::after{
+    color: white;
+    text-decoration: none;
+}
+
+#mainSlider{
+    height: 600px;
+    background: url('../assets/tulpar-bg.jpg') center center no-repeat;
+    background-size: cover;
+}
+.slider{
+    width: 100%;
+}
+#mainCaption{
+    height: 400px;
+    background: rgba (0,0,0, .5);
+}
+.caption{
+    display: flex;
+    align-items:end;
+    justify-content: center;
+    width: 100%;
+    height: 20%;
+    color:white;
+    text-shadow: 0px 0px 3px rgba(0,0,0,0.5), 0px 0px 5px rgba(0,0,0,0.4), 0px 0px 10px rgba(0,0,0,0.6);
+}
+.storyBody{
+    height: 800px;
+    width: 100%;
+    background-color: antiquewhite;
+    background-size: cover;
+}
+.storyİMG{
+    display: inline-block;
+    justify-content: center;
+    height: 60%;
+    width: 60%;
+    margin-top: 100px;
+    margin-left: 50px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+.storyTEXT{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    margin-left: 100px;
+    text-align: left;
+}
+h2{
+    font-size:xx-large;
+}
+p{
+    text-align: left;
+    font-size: 20px;
+}
+.button {
+    background-color: rgb(7, 48, 67);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  .button1:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+.menuBody{
+    height: 850px;
+    width: 100%;
+    background-color: rgb(198, 123, 82);
+    background-size: cover;
+}
+.menuTEXT{
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 50px;
+    margin-left: 100px;
+    text-align: right;
+    margin-top: 100px;
+}
+#ekmek{
+    align-items: flex-end;
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 0%;
+    padding-top: 10%;
+    width: 25%;
+    height: 10%;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+#kek{
+    padding-right: 50px;
+    width: 30%;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+#kurabiye{
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 0%;
+    padding-top: 4%;
+    width: 25%;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+#baklava{
+    padding-right: 50px;
+    width: 30%;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+#mainSatır{
+    height: 1500px;
+    background: url('../assets/home-satır.jpg') center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.satır{
+    width: 100%;
+}
+.contactBody{
+    height: 800px;
+    width: 100%;
+    background-color: antiquewhite;
+    position: absolute;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+}
+.contactTEXT{
+    width: 25%;
+    padding-top: 200px;
+    padding-left: 100px;
+    padding-right: 200px;
+}
+#vit1{
+    width: 15%;
+    padding-right: 10px;
+    padding-top:150px ;
+    height: 200px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+#vit2 {
+    width: 15%;
+    padding-top: 80px;
+    padding-right: 50px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+#vit3{
+    width: 15%;
+    padding-top: 20px;
+    padding-right: 50px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+.hakSutun1{
+    background-color: rgb(7, 48, 67);
+    width: 100%;
+    height: 700px;
+}
+.hakTEXT{
+    width: 20%;
+    padding-top: 70px;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: antiquewhite;
+}
+#hak1{
+    width: 15%;
+    padding-left: 100px;
+    padding-top: 140px;
+    padding-bottom: 100px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+#hak2{
+    width: 15%;
+    padding-right: 60px;
+    padding-left: 20px;
+    bottom: 0;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+.hakSutun2{
+    background-color: antiquewhite;
+    width: 100%;
+    height: 700px;
+}
+.hakTEXT2{
+    width: 20%;
+    padding-top: 70px;
+    padding-right: 50px;
+    padding-left: 50px;
+    color: black;
+}
+#hak3{
+    width: 40%;
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+.hakSutun3{
+    background-color: rgb(198, 123, 82);
+    height: 800px;
+    width: 100%;
+}
+.hakTEXT3{
+    width: 30%;
+    padding-left: 50px;
+}
+#hak4{
+    width: 5%;
+    padding-right: 20px;
+    padding-left: 100px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+#hak5{
+    width: 15%;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 100px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+#hak6{
+    width: 15%;
+    padding-right: 50px;
+    padding-left: 20px;
+    padding-top: 100px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+.iletisimBody{
+    background-color: rgb(198, 123, 82);
+    height: 700px;
+    width: 100%;
+}
+#iletisimİMG{
+    width: 40%;
+    padding-right: 200px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+.iletisimTEXT{
+    padding-left: 100px;
+}
+.iletisimBaslık{
+    padding-top:100px;
+    padding-left: 100px;
+}
+.iletisimSutun2{
+    background-color: antiquewhite;
+    height: 700px;
+}
+.iletisimİMG2{
+    width: 35%;
+    padding-left:150px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    filter: drop-shadow(8px 8px 10px rgba(0, 0, 0,0.5));
+    border-radius: 10px;
+}
+.form{
+    width: 60%;
+    padding-left:450px ;
+}
+#fname{
+    width: 400px;
+    height: 50px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgb(7, 48, 67); 
+    font-size: 16px;
+}
+#lname{
+    width: 400px;
+    height: 50px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgb(7, 48, 67); 
+    font-size: 16px;
+}
+#email{
+    width: 400px;
+    height: 50px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgb(7, 48, 67); 
+    font-size: 16px;
+}
+textarea{
+    width: 400px;
+    height: 60px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgb(7, 48, 67); 
+    font-size: 16px;
+}
+.sonBody{
+    background-color:rgb(7, 48, 67) ;
+    height: 400px;
+}
+.son{
+  list-style-type: none;
+  padding-top: 20px;
+  padding-bottom:20px ;
+  overflow: hidden;
+  background-color: rgb(7, 48, 67);
+  font-size: x-large;
+  text-align: center;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
+}
+.sonTable{
+    width: 100%;
+    padding: 60px;
+    color: white;
+    font-size: x-large;
+}
+
+/* scroll animation */
+
+.animation{
+    opacity: 0;
+    transition: all 0.8s;
+    transform: translateX(-10px);
+}
+.animation.active{
+    opacity: 1;
+    transform: translateX(0px);
+}
+.slogan{
+    opacity: 0;
+    transition: all 0.8s;
+    transform: translateY(-20px);
+}
+.slogan.active{
+    opacity: 1;
+    transform: translateY(0px);
+}

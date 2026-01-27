@@ -1,0 +1,46 @@
+.baslık{
+    color: antiquewhite;
+    font-size: 50px;
+    margin-left: 80px;
+    margin-top: 50px;
+}
+.menu1{
+    background-color: antiquewhite;
+    margin: 70px;
+    height: 1600px;
+}
+.card{
+    width: 80%;
+    box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    margin-top: 70px;
+    margin-left: 50px;
+    margin:40px;
+}
+.card:hover{
+    opacity: 0.8;
+}
+.ürün{
+    padding: 5px 20px;
+}
+h3{
+    font-size: 19px;
+}
+.fiyat{
+    float: right;
+}
+button{
+    color: white;
+    background-color: rgb(7, 48, 67);
+    border: none;
+    display: inline-block;
+    padding: 11px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+}
+button:hover{
+    background-color: rgb(198, 123, 82);
+    color: rgb(7, 48, 67);
+}
