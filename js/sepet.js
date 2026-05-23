@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // =========================================================================
-    // 1. ADIM: SEPET PANELİNİN HTML ŞABLONUNU SAYFAYA ENJEKTE ETME
+    // SEPET PANELİ HTML
     // =========================================================================
+    
     const sepetPanelHtml = `
         <div id="sepet-sidebar" style="position: fixed; top: 0; right: -360px; width: 320px; height: 100vh; background: #073043; color: white; box-shadow: -5px 0 15px rgba(0,0,0,0.5); transition: right 0.3s ease; z-index: 9999; padding: 20px; display: flex; flex-direction: column; font-family: sans-serif; border-left: 2px solid #e07a5f;">
             <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 15px;">
@@ -21,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     document.body.insertAdjacentHTML("beforeend", sepetPanelHtml);
 
-    // Navbar'daki mevcut sepet ikonunun yanına kırmızı bildirim sayacını ekliyoruz
+    // Navbar'daki mevcut sepet ikonunun yanına kırmızı bildirim sayacı
     const sepetIkonu = document.querySelector(".sepet");
     if (sepetIkonu) {
         sepetIkonu.style.cursor = "pointer";
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // =========================================================================
-    // 2. ADIM: ELEMENTLERİ SEÇME
+    //  ELEMENTLERİ SEÇME
     // =========================================================================
     const sepetSidebar = document.getElementById("sepet-sidebar");
     const sepetKapatBtn = document.getElementById("sepet-sidebar-kapat");
@@ -42,16 +43,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const sepetiBosaltBtn = document.getElementById("sepeti-bosalt-btn");
 
     // =========================================================================
-    // 3. ADIM: LOCALSTORAGE VE VERİ YÜKLEME
+    // LOCALSTORAGE VE VERİ YÜKLEME
     // =========================================================================
-    // Tarayıcı hafızasında kayıtlı sepet varsa çekiyoruz, yoksa boş bir liste başlatıyoruz
+    // Tarayıcı hafızasında kayıtlı sepet varsa çek, yoksa boş bir liste başlat
     let sepet = JSON.parse(localStorage.getItem("tulpar_sepet_hafiza")) || [];
 
-    // Sayfa ilk yüklendiğinde hafızadaki ürünleri sepete çizdirir
+    // Sayfa ilk yüklendiğinde hafızadaki ürünleri sepete çiz
     arayuzuGuncelle();
 
     // =========================================================================
-    // 4. ADIM: OLAY DİNLEYİCİLERİ (EVENT LISTENERS)
+    // OLAY DİNLEYİCİLERİ (EVENT LISTENERS)
     // =========================================================================
     
     // Sepet ikonuna veya kırmızı sayaca tıklandığında paneli aç
@@ -61,13 +62,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Paneldeki (X) butonuna basınca paneli kapat
     sepetKapatBtn.addEventListener("click", () => sepetSidebar.style.right = "-360px");
 
-    // Sayfadaki tüm "Sepete Ekle" butonlarını bulup tıklama olayı bağlıyoruz
+    // Sayfadaki tüm "Sepete Ekle" butonlarını bulup tıklama olayı bağla
     const sepeteEkleButonlari = document.querySelectorAll(".card button");
     sepeteEkleButonlari.forEach(buton => {
         buton.addEventListener("click", (e) => {
             const kart = e.target.closest(".card");
             
-            // Kart içindeki ürün başlığını, fiyatını ve görsel yolunu alıyoruz
+            // Kart içindeki ürün başlığını, fiyatını ve görsel yolunu al
             const ad = kart.querySelector("h3").textContent;
             const fiyatText = kart.querySelector(".fiyat").textContent;
             const fiyat = parseInt(fiyatText.replace(/[^0-9]/g, "")); // "30 TL" metnini sayısal 30 yapar
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // =========================================================================
-    // 5. ADIM: SEPET FONKSİYONLARI (İŞ MANTIĞI)
+    // SEPET FONKSİYONLARI (İŞ MANTIĞI)
     // =========================================================================
     
     // Ürünü listeye ekleyen fonksiyon
@@ -123,16 +124,16 @@ document.addEventListener("DOMContentLoaded", () => {
             sepetUrunListesi.insertAdjacentHTML("beforeend", urunSatiriHtml);
         });
 
-        // Sayaç badge değerini ve alt toplam tutarını ekrana yazdırıyoruz
+        // Sayaç badge değerini ve alt toplam tutarını ekrana yazdır
         if (sepetSayacBadge) sepetSayacBadge.textContent = toplamAdet;
         sepetToplamTutar.textContent = `${toplamFiyat} TL`;
     }
 
     // =========================================================================
-    // 6. ADIM: TEMİZLİK VE GLOBAL SİLME FONKSİYONLARI
+    // TEMİZLİK VE GLOBAL SİLME FONKSİYONLARI
     // =========================================================================
     
-    // Sepetteki dinamik HTML butonlarının erişebilmesi için silme fonksiyonunu window nesnesine bağlıyoruz
+    // Sepetteki dinamik HTML butonlarının erişebilmesi için silme fonksiyonunu window nesnesine bağla
     window.sepettenUrunSil = function(ad) {
         sepet = sepet.filter(item => item.ad !== ad); // Seçilen ürün hariç diğerlerini filtrele
         hafizayaKaydet();

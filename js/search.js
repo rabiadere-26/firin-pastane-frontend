@@ -10,7 +10,7 @@ searchicon.addEventListener('click',()=>{
 })
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Navbar içindeki arama input alanını hedef alıyoruz
+    // Navbar içindeki arama input alanını hedef al
     const searchInput = document.querySelector(".search input");
     
     if (!searchInput) return;
@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const urunKartlari = document.querySelectorAll(".card");
 
         urunKartlari.forEach(card => {
-            // Kartın içindeki h3 etiketinden ürün adını alıyoruz
+            // Kartın içindeki h3 etiketinden ürün adını al
             const urunAdi = card.querySelector("h3").textContent.toLowerCase();
-            // Tablo düzeninin bozulmaması için kartın en yakın üst 'td' elementini buluyoruz
+            // Tablo düzeninin bozulmaması için kartın en yakın üst 'td' elementini bul
             const tabloHucresi = card.closest("td");
 
             if (urunAdi.includes(arananKelime)) {
